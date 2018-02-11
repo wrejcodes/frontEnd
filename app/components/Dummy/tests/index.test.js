@@ -1,10 +1,19 @@
-// import React from 'react';
-// import { shallow } from 'enzyme';
-
-// import Dummy from '../index';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { FormattedMessage } from 'react-intl';
+import Dummy from '../index';
+import messages from '../messages';
 
 describe('<Dummy />', () => {
-  it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(true);
+  it('Should render some text', () => {
+    const renderedComponent = shallow(
+      <Dummy />
+    );
+
+    expect(renderedComponent.contains(
+      <div>
+        <FormattedMessage {...messages.header} />
+      </div>
+    )).toBe(true);
   });
 });
