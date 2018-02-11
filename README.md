@@ -15,7 +15,7 @@
   </a>
   <!-- Build Status -->
   <a href="https://travis-ci.org/Gods-Of-ACM/frontEnd">
-    <img src="https://travis-ci.org/Gods-Of-ACM/frontEnd" alt="Build Status" />
+    <img src="https://travis-ci.org/Gods-Of-ACM/frontEnd.svg?branch=master" alt="Build Status" />
   </a>
   <!-- Test Coverage -->
   <a href='https://coveralls.io/github/Gods-Of-ACM/frontEnd?branch=master'>
