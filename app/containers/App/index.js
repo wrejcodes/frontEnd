@@ -23,13 +23,13 @@ import NavBar from 'containers/NavBar/Loadable';
 export default function App() {
   return (
     <div>
+      <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/entries" component={EntriesPage} />
         <Route exact path="/database" component={ViewDBPage} />
         <Route component={NotFoundPage} />
       </Switch>
-      <NavBar />
     </div>
   );
 }
