@@ -9,7 +9,8 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
   }
 
   body.fontLoaded {
@@ -17,7 +18,7 @@ injectGlobal`
   }
 
   #app {
-    background-color: #fafafa;
+    background-color: lightgrey;
     min-height: 100%;
     min-width: 100%;
   }

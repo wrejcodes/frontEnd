@@ -8,7 +8,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
@@ -17,17 +16,18 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectEntriesPage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
+import PageHeader from '../../components/PageHeader/index';
+
 
 export class EntriesPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
         <Helmet>
-          <title>EntriesPage</title>
+          <title>Entries</title>
           <meta name="description" content="Description of EntriesPage" />
         </Helmet>
-        <FormattedMessage {...messages.header} />
+        <PageHeader title="Database Entries" />
       </div>
     );
   }
