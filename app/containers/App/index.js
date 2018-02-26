@@ -18,6 +18,7 @@ import HomePage from 'containers/HomePage/Loadable';
 import EntriesPage from 'containers/EntriesPage/Loadable';
 import ViewDBPage from 'containers/ViewDBPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import NavBar from 'containers/NavBar/Loadable';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route exact path="/database" component={ViewDBPage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <NavBar />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 /**
  *
- * Asynchronously loads the component for BtnTest1
+ * Asynchronously loads the component for Button1
  *
  */
 
