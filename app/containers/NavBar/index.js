@@ -1,0 +1,69 @@
+/**
+ *
+ * NavBar
+ *
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { connect } from 'react-redux';
+// import { Helmet } from 'react-helmet';
+// import { FormattedMessage } from 'react-intl';
+import { createStructuredSelector } from 'reselect';
+import { compose } from 'redux';
+
+import injectSaga from 'utils/injectSaga';
+import injectReducer from 'utils/injectReducer';
+
+import Button1 from 'components/Button1/Loadable';
+import { getActive } from 'themes';
+import makeSelectNavBar from './selectors';
+import reducer from './reducer';
+import saga from './saga';
+// import messages from './messages';
+
+export class NavBar extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  render() {
+    const theme = getActive();
+    const NavWrap = styled.div`
+      height: 50px;
+      width: 100%;
+      background-color: grey;
+      display: -webkit-flex;
+      display: flex;
+    `;
+    return (
+      <NavWrap>
+        <Button1 theme={theme} text="HOME" link="/" />
+        <Button1 theme={theme} text="ENTRIES" link="/entries" />
+        <Button1 theme={theme} text="DATABASE" link="/database" />
+      </NavWrap>
+    );
+  }
+}
+
+NavBar.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = createStructuredSelector({
+  navbar: makeSelectNavBar(),
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+  };
+}
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+const withReducer = injectReducer({ key: 'navBar', reducer });
+const withSaga = injectSaga({ key: 'navBar', saga });
+
+export default compose(
+  withReducer,
+  withSaga,
+  withConnect,
+)(NavBar);

@@ -15,8 +15,8 @@ class PageHeader extends React.Component { // eslint-disable-line react/prefer-s
       padding: 0.15em 1em;
       margin: 0 1em;
       text-align: center;
-      background-color: #FFFFFF;
-      color: #222222;
+      background-color: #373c42;
+      color: white;
       border: 2px solid #000000;
       /*text-shadow: -1px 0 #696969, 0 1px #696969, 1px 0 #696969, 0 -1px #696969;*//
     `;

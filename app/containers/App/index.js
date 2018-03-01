@@ -18,10 +18,12 @@ import HomePage from 'containers/HomePage/Loadable';
 import EntriesPage from 'containers/EntriesPage/Loadable';
 import ViewDBPage from 'containers/ViewDBPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import NavBar from 'containers/NavBar/Loadable';
 
 export default function App() {
   return (
     <div>
+      <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/entries" component={EntriesPage} />
