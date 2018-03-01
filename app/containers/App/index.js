@@ -34,7 +34,7 @@ export default function App() {
         <Route exact path="/database" component={ViewDBPage} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/manage-accounts" component={ManageAccounts} />
+        <Route exact path="/accounts" component={ManageAccounts} />
         <Route exact path="/denied" component={BadPermissions} />
         <Route component={NotFoundPage} />
       </Switch>
