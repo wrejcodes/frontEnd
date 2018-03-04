@@ -13,6 +13,7 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 
 import HomePage from 'containers/HomePage/Loadable';
 import EntriesPage from 'containers/EntriesPage/Loadable';
@@ -23,21 +24,29 @@ import Login from 'containers/Login/Loadable';
 import BadPermissions from 'containers/BadPermissions/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavBar from 'containers/NavBar/Loadable';
+import Analysis from 'containers/Analysis/Loadable';
 
 export default function App() {
   return (
     <div>
+      {/* <NavBar path={this.props.location.pathname} /> */}
       <NavBar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/entries" component={EntriesPage} />
-        <Route exact path="/database" component={ViewDBPage} />
-        <Route exact path="/profile" component={Profile} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/accounts" component={ManageAccounts} />
-        <Route exact path="/denied" component={BadPermissions} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <div className="MainBodyWrap">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/entries" component={EntriesPage} />
+          <Route exact path="/database" component={ViewDBPage} />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/accounts" component={ManageAccounts} />
+          <Route exact path="/denied" component={BadPermissions} />
+          <Route exact path="/analysis" component={Analysis} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
     </div>
   );
 }
+// App.propTypes = {
+//   page: PropTypes.string,
+// };
