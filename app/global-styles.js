@@ -18,9 +18,23 @@ injectGlobal`
   }
 
   #app {
-    background-color: lightgrey;
     min-height: 100%;
     min-width: 100%;
+    background: rgb(229,229,229);
+    background: -moz-linear-gradient(top, rgba(229,229,229,1) 2%, rgba(141,209,248,1) 98%, rgba(30,87,153,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(229,229,229,1) 2%,rgba(141,209,248,1) 98%,rgba(30,87,153,1) 100%);
+    background: linear-gradient(to bottom, rgba(229,229,229,1) 2%,rgba(141,209,248,1) 98%,rgba(30,87,153,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#1e5799',GradientType=0 );
+  }
+
+  .header {
+      max-width: 700px;
+      margin: auto;
+  }
+
+  .MainBodyWrap {
+    max-width: 1500px;
+    margin: auto;
   }
 
   p,

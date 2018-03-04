@@ -24,12 +24,14 @@ export default function App() {
   return (
     <div>
       <NavBar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/entries" component={EntriesPage} />
-        <Route exact path="/database" component={ViewDBPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <div className="MainBodyWrap">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/entries" component={EntriesPage} />
+          <Route exact path="/database" component={ViewDBPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
     </div>
   );
 }
