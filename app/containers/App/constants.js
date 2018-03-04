@@ -10,3 +10,18 @@
  */
 
 export const DEFAULT_LOCALE = 'en';
+export const SCHEMAS = {
+  target: [
+    { type: 'text', name: 'Target Name' },
+    { type: 'number', name: 'Target ID' },
+  ],
+  experiment: [
+    { type: 'text', name: 'Experiment Name' },
+    { type: 'number', name: 'Experiment ID' },
+  ],
+  chemical: [
+    { type: 'text', name: 'Chemical Name' },
+    { type: 'number', name: 'Chemical ID' },
+  ],
+  blank: [],
+};
