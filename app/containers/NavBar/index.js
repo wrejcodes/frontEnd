@@ -33,11 +33,17 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
       display: -webkit-flex;
       display: flex;
     `;
+    // const loginLink = '/login';
+    // const loginText = "LOGIN";
     return (
       <NavWrap>
         <Button1 theme={theme} text="HOME" link="/" />
         <Button1 theme={theme} text="ENTRIES" link="/entries" />
         <Button1 theme={theme} text="DATABASE" link="/database" />
+        <Button1 theme={theme} text="LOGIN" link="/login" />
+        <Button1 theme={theme} text="PROFILE" link="/profile" />
+        <Button1 theme={theme} text="ACCOUNTS" link="/accounts" />
+        <Button1 theme={theme} text="DENIED" link="/denied" />
       </NavWrap>
     );
   }
