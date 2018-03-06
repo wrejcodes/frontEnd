@@ -13,6 +13,7 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 
 import HomePage from 'containers/HomePage/Loadable';
 import EntriesPage from 'containers/EntriesPage/Loadable';
@@ -23,10 +24,12 @@ import Login from 'containers/Login/Loadable';
 import BadPermissions from 'containers/BadPermissions/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavBar from 'containers/NavBar/Loadable';
+// import Analysis from 'containers/Analysis/Loadable';
 
 export default function App() {
   return (
     <div>
+      {/* <NavBar path={this.props.location.pathname} /> */}
       <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -41,3 +44,6 @@ export default function App() {
     </div>
   );
 }
+// App.propTypes = {
+//   page: PropTypes.string,
+// };

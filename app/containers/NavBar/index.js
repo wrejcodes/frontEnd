@@ -8,6 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+// import { withRouter } from 'react-router';
 // import { Helmet } from 'react-helmet';
 // import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
@@ -43,8 +44,6 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
       display: -webkit-flex;
       display: flex;
     `;
-    // const loginLink = '/login';
-    // const loginText = "LOGIN";
     return (
       <NavWrap>
         <Button1 theme={theme} text="HOME" link="/" handler={(link) => this.navigate(link)} />
@@ -60,6 +59,7 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
 }
 
 NavBar.propTypes = {
+  // location: PropTypes.object,
   dispatch: PropTypes.func.isRequired,
 };
 
@@ -75,10 +75,12 @@ function mapDispatchToProps(dispatch) {
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
+// const routherthing = withRouther(NavBar);
 const withReducer = injectReducer({ key: 'navBar', reducer });
 const withSaga = injectSaga({ key: 'navBar', saga });
 
 export default compose(
+  // routherthing,
   withReducer,
   withSaga,
   withConnect,
