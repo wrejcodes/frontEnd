@@ -31,7 +31,6 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
   }
 
   navigate(path) {
-    console.log(this.props);
     this.props.dispatch(push(path));
   }
 
