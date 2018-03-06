@@ -24,7 +24,7 @@ import Login from 'containers/Login/Loadable';
 import BadPermissions from 'containers/BadPermissions/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavBar from 'containers/NavBar/Loadable';
-import Analysis from 'containers/Analysis/Loadable';
+// import Analysis from 'containers/Analysis/Loadable';
 
 export default function App() {
   return (
