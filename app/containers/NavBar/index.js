@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 // import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import { push } from 'react-router-redux';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
@@ -25,17 +26,15 @@ import saga from './saga';
 // import messages from './messages';
 
 export class NavBar extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  constructor() {
-    super();
-    this.state = {
-      activeTab: 'home',
-    };
+  constructor(props) {
+    super(props);
+    this.navigate = this.navigate.bind(this);
   }
-  setPathActive = (pathname) => {
-    this.state = {
-      activeTab: pathname,
-    };
+
+  navigate(path) {
+    this.props.dispatch(push(path));
   }
+
   render() {
     const theme = getActive();
     const NavWrap = styled.div`
@@ -47,13 +46,13 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
     `;
     return (
       <NavWrap>
-        <Button1 theme={theme} text="HOME" link="/" className={(this.state.activeTab === 'home') ? 'active' : ''} onClick={this.setPathActive('home')} />
-        <Button1 theme={theme} text="ENTRIES" link="/entries" className={(this.state.activeTab === 'entries') ? 'active' : ''} onClick={this.setPathActive('entries')} />
-        <Button1 theme={theme} text="DATABASE" link="/database" className={(this.state.activeTab === 'database') ? 'active' : ''} onClick={this.setPathActive('database')} />
-        <Button1 theme={theme} text="LOGIN" link="/login" className={(this.state.activeTab === 'login') ? 'active' : ''} onClick={this.setPathActive('active')} />
-        <Button1 theme={theme} text="PROFILE" link="/profile" className={(this.state.activeTab === 'profile') ? 'active' : ''} onClick={this.setPathActive('profile')} />
-        <Button1 theme={theme} text="ACCOUNTS" link="/accounts" className={(this.state.activeTab === 'accounts') ? 'active' : ''} onClick={this.setPathActive('accounts')} />
-        <Button1 theme={theme} text="DENIED" link="/denied" className={(this.state.activeTab === 'denied') ? 'active' : ''} onClick={this.setPathActive('denied')} />
+        <Button1 theme={theme} text="HOME" link="/" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="ENTRIES" link="/entries" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="DATABASE" link="/database" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="LOGIN" link="/login" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="PROFILE" link="/profile" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="ACCOUNTS" link="/accounts" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="DENIED" link="/denied" handler={(link) => this.navigate(link)} />
       </NavWrap>
     );
   }

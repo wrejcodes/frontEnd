@@ -31,19 +31,16 @@ export default function App() {
     <div>
       {/* <NavBar path={this.props.location.pathname} /> */}
       <NavBar />
-      <div className="MainBodyWrap">
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/entries" component={EntriesPage} />
-          <Route exact path="/database" component={ViewDBPage} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/accounts" component={ManageAccounts} />
-          <Route exact path="/denied" component={BadPermissions} />
-          <Route exact path="/analysis" component={Analysis} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/entries" component={EntriesPage} />
+        <Route path="/database" component={ViewDBPage} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/login" component={Login} />
+        <Route path="/accounts" component={ManageAccounts} />
+        <Route path="/denied" component={BadPermissions} />
+        <Route component={NotFoundPage} />
+      </Switch>
     </div>
   );
 }
