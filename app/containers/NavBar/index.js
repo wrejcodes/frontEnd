@@ -51,6 +51,7 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
 NavBar.propTypes = {
   // location: PropTypes.object,
   dispatch: PropTypes.func.isRequired,
+  // active: PropTypes.obj,
 };
 
 const mapStateToProps = createStructuredSelector({

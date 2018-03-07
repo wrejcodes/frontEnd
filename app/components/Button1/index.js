@@ -32,7 +32,7 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
       padding: 10px;
     `;
     return (
-      <StyledButton className="StyledButton" onClick={(evt) => { this.onClick(evt); }} >
+      <StyledButton onClick={(evt) => { this.onClick(evt); }} >
         {this.props.text}
       </StyledButton>
     );
@@ -44,6 +44,7 @@ Button1.propTypes = {
   text: PropTypes.string,
   theme: ImmutablePropTypes.map,
   handler: PropTypes.func.isRequired,
+  // active: PropTypes.obj,
 };
 
 export default Button1;

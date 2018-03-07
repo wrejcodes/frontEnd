@@ -34,9 +34,9 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <PageHeader title="My Chemical Bromance" />
         <br />
         <FlexBox >
-          <BigBtn1 theme={theme} text="View Database" link="/database" />
-          <BigBtn1 tab="5%" theme={theme} text="Add/Delete Entries" link="/entries" />
-          <BigBtn1 tab="10%" theme={theme} text="Analysis" link="/analysis" />
+          <BigBtn1 tab="1%" theme={theme} text="View Database" link="/database" />
+          <BigBtn1 tab="6%" theme={theme} text="Add/Delete Entries" link="/entries" />
+          <BigBtn1 tab="11%" theme={theme} text="Analysis" link="/analysis" />
         </FlexBox>
       </div>
     );

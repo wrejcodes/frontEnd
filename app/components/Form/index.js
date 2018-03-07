@@ -13,7 +13,7 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
     const Submit = styledElements.Submit;
     const Input = styledElements.Input;
     const schema = this.props.schema.map((value) =>
-      <Input type={value.type} placeholder={value.name} />
+      <Input type={value.type} placeholder={value.name} style={value.style} />
     );
     return (
       <div>

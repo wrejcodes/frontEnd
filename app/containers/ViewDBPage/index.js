@@ -8,10 +8,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
+
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import { getActive } from 'themes';
 
 import PageHeader from 'components/PageHeader/index';
+import DbViewport from 'components/DbViewport';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';
@@ -19,7 +23,21 @@ import reducer from './reducer';
 import saga from './saga';
 
 export class ViewDbpage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = { selection: 'blank' };
+  }
+  changeSelection = (e) => {
+    this.setState({ selection: e.target.value });
+  }
   render() {
+    const theme = getActive();
+    const Select = styled.select`
+      border: 1px solid black;
+      margin-left: 5px;
+      background-color: ${theme.get('primary')};
+      margin-bottom: 5px;
+    `;
     return (
       <div>
         <Helmet>
@@ -27,6 +45,13 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
           <meta name="description" content="Database Page" />
         </Helmet>
         <PageHeader title="Database" />
+        <Select onChange={this.changeSelection}>
+          <option value="blank" hidden>Select Form</option>
+          <option value="target">Target</option>
+          <option value="experiment">Experiment</option>
+          <option value="chemical">Chemical</option>
+        </Select>
+        <DbViewport />
       </div>
     );
   }
