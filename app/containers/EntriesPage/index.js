@@ -11,16 +11,16 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-
+import { getActive } from 'themes';
+import Form from 'components/Form/index';
+import PageHeader from 'components/PageHeader/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectEntriesPage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import PageHeader from '../../components/PageHeader/index';
-import Form from '../../components/Form/index';
-import { SCHEMAS } from '../App/constants';
 
+import { SCHEMAS } from '../App/constants';
 
 export class EntriesPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor() {
@@ -31,10 +31,11 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
     this.setState({ selection: e.target.value });
   }
   render() {
+    const theme = getActive();
     const Select = styled.select`
       border: 1px solid black;
       margin-left: 5px;
-      background-color: lavender;
+      background-color: ${theme.get('primary')};
       margin-bottom: 5px;
     `;
     return (
