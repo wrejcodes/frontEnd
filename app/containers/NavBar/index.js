@@ -8,8 +8,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-// import { Helmet } from 'react-helmet';
-// import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
@@ -21,7 +19,6 @@ import { getActive } from 'themes';
 import makeSelectNavBar from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-// import messages from './messages';
 
 export class NavBar extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -33,14 +30,13 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
       display: -webkit-flex;
       display: flex;
     `;
-    // const loginLink = '/login';
-    // const loginText = "LOGIN";
     return (
       <NavWrap>
         <Button1 theme={theme} text="HOME" link="/" />
         <Button1 theme={theme} text="ENTRIES" link="/entries" />
         <Button1 theme={theme} text="DATABASE" link="/database" />
         <Button1 theme={theme} text="LOGIN" link="/login" />
+        <Button1 theme={theme} text="REGISTRATION" link="/registration" />
         <Button1 theme={theme} text="PROFILE" link="/profile" />
         <Button1 theme={theme} text="ACCOUNTS" link="/accounts" />
         <Button1 theme={theme} text="DENIED" link="/denied" />

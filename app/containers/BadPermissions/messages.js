@@ -8,6 +8,6 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   header: {
     id: 'app.containers.BadPermissions.header',
-    defaultMessage: 'This is BadPermissions container !',
+    defaultMessage: 'You do not have permission to access this page.',
   },
 });

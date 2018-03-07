@@ -12,8 +12,7 @@ class PageHeader extends React.Component { // eslint-disable-line react/prefer-s
   render() {
     const Header = styled.h1`
       border-radius:10px;
-      padding: 0.15em 1em;
-      margin: 0 1em;
+      margin-bottom: 75px;
       text-align: center;
       background-color: #373c42;
       color: white;

@@ -5,18 +5,10 @@
 */
 
 import React from 'react';
-
-// import styled from 'styled-components';
-
-// import { FormattedMessage } from 'react-intl';
-
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-// import messages from './messages';
 
-// const assert = require('assert');
-// background-color: ${theme.getActive().primary},
 class Button1 extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     const StyledButton = styled.a`
@@ -29,7 +21,6 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
       height: auto;
       padding: 10px;
     `;
-    //     ;;; ${theme.primary}
     return (
       <StyledButton className="StyledButton" href={this.props.link}>
         {this.props.text}
