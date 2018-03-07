@@ -9,88 +9,13 @@ import React from 'react';
 
 import styled from 'styled-components';
 import { getActive } from 'themes';
+import Data from '../../../moch_data/json/assay_v2.json';
 import Entries from '../DbEntry';
 
 class DbViewport extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.moch = [
-      {
-        head: 'Entry0',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry1',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry2',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry3',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry4',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry0',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry1',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry2',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry3',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry4',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry0',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry1',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry2',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry3',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-      {
-        head: 'Entry4',
-        desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-        id: 1,
-      },
-    ];
+    this.moch = Data;
   }
   render() {
     const theme = getActive();
@@ -114,3 +39,31 @@ DbViewport.propTypes = {
 };
 
 export default DbViewport;
+
+// this.moch = [
+//   {
+//     head: 'Entry0',
+//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
+//     id: 1,
+//   },
+//   {
+//     head: 'Entry1',
+//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
+//     id: 1,
+//   },
+//   {
+//     head: 'Entry2',
+//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
+//     id: 1,
+//   },
+//   {
+//     head: 'Entry3',
+//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
+//     id: 1,
+//   },
+//   {
+//     head: 'Entry4',
+//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
+//     id: 1,
+//   },
+// }
