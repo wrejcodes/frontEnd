@@ -23,6 +23,9 @@ class DbViewport extends React.Component { // eslint-disable-line react/prefer-s
     super(props);
     // this.moch = Object.assign(Assay, Citation, CitationID, Target, TargetID, Tox);
     this.moch = [...Assay, ...Citation];
+    // this.setState({
+    //
+    // })
   }
   render() {
     const theme = getActive();
