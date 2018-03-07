@@ -10,12 +10,34 @@
  */
 
 import React from 'react';
+import styled from 'styled-components';
+import BigBtn1 from 'components/BigBtn1';
+import { getActive } from 'themes';
 import PageHeader from '../../components/PageHeader/index';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  // constructor(){
+  //   super();
+  //
+  // };
   render() {
+    const theme = getActive();
+    const FlexBox = styled.div`
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    `;
     return (
-      <PageHeader title="My Chemical Bromance" />
+      <div>
+        <PageHeader title="My Chemical Bromance" />
+        <br />
+        <FlexBox >
+          <BigBtn1 theme={theme} text="View Database" link="/database" />
+          <BigBtn1 tab="5%" theme={theme} text="Add/Delete Entries" link="/entries" />
+          <BigBtn1 tab="10%" theme={theme} text="Analysis" link="/analysis" />
+        </FlexBox>
+      </div>
     );
   }
 }

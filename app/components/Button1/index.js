@@ -10,6 +10,16 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
 class Button1 extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(evt) {
+    evt.preventDefault();
+    this.props.handler(this.props.link);
+  }
+
   render() {
     const StyledButton = styled.a`
       background-color: ${this.props.theme.get('secondary')};
@@ -22,7 +32,7 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
       padding: 10px;
     `;
     return (
-      <StyledButton className="StyledButton" href={this.props.link}>
+      <StyledButton className="StyledButton" onClick={(evt) => { this.onClick(evt); }} >
         {this.props.text}
       </StyledButton>
     );
@@ -30,9 +40,10 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
 }
 
 Button1.propTypes = {
-  link: PropTypes.string,
+  link: PropTypes.string.isRequired,
   text: PropTypes.string,
   theme: ImmutablePropTypes.map,
+  handler: PropTypes.func.isRequired,
 };
 
 export default Button1;
