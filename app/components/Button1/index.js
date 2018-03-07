@@ -13,10 +13,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-// import messages from './messages';
 
-// const assert = require('assert');
-// background-color: ${theme.getActive().primary},
 class Button1 extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
@@ -41,7 +38,7 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
     `;
     //     ;;; ${theme.primary}
     return (
-      <StyledButton className="StyledButton" onClick={(evt) => { this.onClick(evt); }} >
+      <StyledButton onClick={(evt) => { this.onClick(evt); }} >
         {this.props.text}
       </StyledButton>
     );
@@ -53,6 +50,7 @@ Button1.propTypes = {
   text: PropTypes.string,
   theme: ImmutablePropTypes.map,
   handler: PropTypes.func.isRequired,
+  // active: PropTypes.obj,
 };
 
 export default Button1;
