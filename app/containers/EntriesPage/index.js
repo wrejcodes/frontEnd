@@ -19,16 +19,34 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectEntriesPage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-
+import { postEntry } from './actions';
 import { SCHEMAS } from '../App/constants';
 
 export class EntriesPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor() {
     super();
+    this.submit = this.submit.bind(this);
     this.state = { selection: 'blank' };
   }
   changeSelection = (e) => {
     this.setState({ selection: e.target.value });
+  }
+  submit(entryType) {
+    // NOTE: There is a conditional in the loop to check if name is defined
+    //       this can be removed once the definitions of the models are transfered
+    //       it is only there to prevent the models that are not connected from
+    //       throwing errors
+
+    const fields = document.getElementById('entryData').children;
+    const data = {};
+    for (let i = 0; i < fields.length; i += 1) {
+      if (fields[i].name === undefined || fields[i].name === '') {
+        console.log('This entry has not defined connection to database');
+        return;
+      }
+      data[fields[i].name] = fields[i].value;
+    }
+    this.props.dispatch(postEntry(entryType, data));
   }
   render() {
     const theme = getActive();
@@ -51,7 +69,7 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
           <option value="experiment">Experiment</option>
           <option value="chemical">Chemical</option>
         </Select>
-        <Form schema={SCHEMAS[this.state.selection]} />
+        <Form schema={SCHEMAS[this.state.selection]} schemaType={this.state.selection} handler={this.submit} />
       </div>
     );
   }

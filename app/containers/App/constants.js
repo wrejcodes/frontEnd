@@ -10,28 +10,29 @@
  */
 
 export const DEFAULT_LOCALE = 'en';
+export const API_URL = 'http://localhost:3001/api';
 export const SCHEMAS = {
   blank: [],
   login: [
-    { type: 'text', name: ' Username' },
-    { type: 'password', name: ' Password' },
+    { type: 'text', label: ' Username' },
+    { type: 'password', label: ' Password' },
   ],
   registration: [
-    { type: 'email', name: ' Email' },
-    { type: 'text', name: ' Username' },
-    { type: 'password', name: ' Password' },
-    { type: 'password', name: ' Confirm Password' },
+    { type: 'email', label: ' Email' },
+    { type: 'text', label: ' Username' },
+    { type: 'password', label: ' Password' },
+    { type: 'password', label: ' Confirm Password' },
   ],
   target: [
-    { type: 'text', name: ' Target Name' },
-    { type: 'number', name: ' Target ID' },
+    { type: 'text', label: ' Target Name' },
+    { type: 'number', label: ' Target ID' },
   ],
   experiment: [
-    { type: 'text', name: ' Experiment Name' },
-    { type: 'number', name: ' Experiment ID' },
+    { type: 'text', label: ' Experiment Name', name: 'assay_name' },
+    { type: 'number', label: ' Experiment ID', name: 'aid' },
   ],
   chemical: [
-    { type: 'text', name: ' Chemical Name' },
-    { type: 'number', name: ' Chemical ID' },
+    { type: 'text', label: ' Chemical Name' },
+    { type: 'number', label: ' Chemical ID' },
   ],
 };
