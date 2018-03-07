@@ -8,26 +8,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PageHeader from 'components/PageHeader/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectManageAccounts from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
 
 export class ManageAccounts extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
         <Helmet>
-          <title>ManageAccounts</title>
-          <meta name="description" content="Description of ManageAccounts" />
+          <title>Accounts</title>
+          <meta name="description" content="Accounts Page" />
         </Helmet>
-        <FormattedMessage {...messages.header} />
+        <PageHeader title="Manage Accounts" />
       </div>
     );
   }

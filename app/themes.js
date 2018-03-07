@@ -2,7 +2,9 @@
 //
 // // SET ACTIVE THEME
 // // GET ACTIVE THEME
-//
+
+import styled from 'styled-components';
+
 const { Map } = require('immutable');
 // const assert = require('assert');
 
@@ -59,8 +61,48 @@ const themes = {
   }),
 };
 
+// Styled Elements
+const styledElements = {
+  Input: styled.input`
+        border: 1px solid black;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: lavender;
+      `,
+  Submit: styled.input`
+        border: 1px solid black;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        background-color: #A1D4E3;
+        border-radius: 5px;
+      `,
+  Header: styled.h1`
+        border-radius:10px;
+        margin-bottom: 75px;
+        text-align: center;
+        background-color: #373c42;
+        color: white;
+        border: 2px solid #000000;
+      `,
+  Select: styled.select`
+        border: 1px solid black;
+        margin-left: 5px;
+        background-color: lavender;
+        margin-bottom: 5px;
+      `,
+  NavWrap: styled.div`
+        height: 50px;
+        width: 100%;
+        background-color: grey;
+        display: -webkit-flex;
+        display: flex;
+      `,
+};
+
 export {
   themes,
   getActive,
   setActive,
+  styledElements,
 };

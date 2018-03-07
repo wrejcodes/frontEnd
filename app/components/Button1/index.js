@@ -5,11 +5,6 @@
 */
 
 import React from 'react';
-
-// import styled from 'styled-components';
-
-// import { FormattedMessage } from 'react-intl';
-
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
@@ -36,7 +31,6 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
       height: auto;
       padding: 10px;
     `;
-    //     ;;; ${theme.primary}
     return (
       <StyledButton onClick={(evt) => { this.onClick(evt); }} >
         {this.props.text}

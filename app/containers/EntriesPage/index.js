@@ -42,7 +42,7 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
       <div>
         <Helmet>
           <title>Entries</title>
-          <meta name="description" content="Description of EntriesPage" />
+          <meta name="description" content="Entries Page" />
         </Helmet>
         <PageHeader title="Database Entries" />
         <Select onChange={this.changeSelection}>

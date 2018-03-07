@@ -5,7 +5,6 @@
 */
 
 import React from 'react';
-// import styled from 'styled-components';
 
 import styled from 'styled-components';
 import { getActive } from 'themes';
@@ -39,31 +38,3 @@ DbViewport.propTypes = {
 };
 
 export default DbViewport;
-
-// this.moch = [
-//   {
-//     head: 'Entry0',
-//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-//     id: 1,
-//   },
-//   {
-//     head: 'Entry1',
-//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-//     id: 1,
-//   },
-//   {
-//     head: 'Entry2',
-//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-//     id: 1,
-//   },
-//   {
-//     head: 'Entry3',
-//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-//     id: 1,
-//   },
-//   {
-//     head: 'Entry4',
-//     desc: 'This is a sample descripton of this entry that is ver long and ver pret.',
-//     id: 1,
-//   },
-// }

@@ -42,7 +42,7 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
       <div>
         <Helmet>
           <title>Database</title>
-          <meta name="description" content="Description of ViewDbpage" />
+          <meta name="description" content="Database Page" />
         </Helmet>
         <PageHeader title="Database" />
         <Select onChange={this.changeSelection}>

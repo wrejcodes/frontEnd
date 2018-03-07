@@ -25,7 +25,7 @@ export class Analysis extends React.Component { // eslint-disable-line react/pre
       <div>
         <Helmet>
           <title>Analysis</title>
-          <meta name="description" content="Description of Analysis" />
+          <meta name="description" content="Analysis Page" />
         </Helmet>
         <FormattedMessage {...messages.header} />
       </div>
