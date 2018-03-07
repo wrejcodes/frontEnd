@@ -11,17 +11,27 @@
 
 export const DEFAULT_LOCALE = 'en';
 export const SCHEMAS = {
+  blank: [],
+  login: [
+    { type: 'text', name: ' Username' },
+    { type: 'password', name: ' Password' },
+  ],
+  registration: [
+    { type: 'email', name: ' Email' },
+    { type: 'text', name: ' Username' },
+    { type: 'password', name: ' Password' },
+    { type: 'password', name: ' Confirm Password' },
+  ],
   target: [
-    { type: 'text', name: 'Target Name' },
-    { type: 'number', name: 'Target ID' },
+    { type: 'text', name: ' Target Name' },
+    { type: 'number', name: ' Target ID' },
   ],
   experiment: [
-    { type: 'text', name: 'Experiment Name' },
-    { type: 'number', name: 'Experiment ID' },
+    { type: 'text', name: ' Experiment Name' },
+    { type: 'number', name: ' Experiment ID' },
   ],
   chemical: [
-    { type: 'text', name: 'Chemical Name' },
-    { type: 'number', name: 'Chemical ID' },
+    { type: 'text', name: ' Chemical Name' },
+    { type: 'number', name: ' Chemical ID' },
   ],
-  blank: [],
 };

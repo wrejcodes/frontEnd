@@ -1,6 +1,6 @@
 /**
  *
- * Login
+ * Registration
  *
  */
 
@@ -15,32 +15,32 @@ import PageHeader from 'components/PageHeader/index';
 import Form from 'components/Form/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import makeSelectLogin from './selectors';
+import makeSelectRegistration from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { SCHEMAS } from '../App/constants';
 
-export class Login extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class Registration extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
         <Helmet>
-          <title>Login</title>
-          <meta name="description" content="Login Page" />
+          <title>Registration</title>
+          <meta name="description" content="Registration Page" />
         </Helmet>
-        <PageHeader title="Login" />
-        <Form schema={SCHEMAS.login} />
+        <PageHeader title="Registration" />
+        <Form schema={SCHEMAS.registration} />
       </div>
     );
   }
 }
 
-Login.propTypes = {
+Registration.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
-  login: makeSelectLogin(),
+  registration: makeSelectRegistration(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -51,11 +51,11 @@ function mapDispatchToProps(dispatch) {
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'login', reducer });
-const withSaga = injectSaga({ key: 'login', saga });
+const withReducer = injectReducer({ key: 'registration', reducer });
+const withSaga = injectSaga({ key: 'registration', saga });
 
 export default compose(
   withReducer,
   withSaga,
   withConnect,
-)(Login);
+)(Registration);

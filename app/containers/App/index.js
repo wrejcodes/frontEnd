@@ -21,6 +21,7 @@ import ViewDBPage from 'containers/ViewDBPage/Loadable';
 import ManageAccounts from 'containers/ManageAccounts/Loadable';
 import Profile from 'containers/Profile/Loadable';
 import Login from 'containers/Login/Loadable';
+import Registration from 'containers/Registration/Loadable';
 import BadPermissions from 'containers/BadPermissions/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavBar from 'containers/NavBar/Loadable';
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/login" component={Login} />
         <Route path="/accounts" component={ManageAccounts} />
         <Route path="/denied" component={BadPermissions} />
+        <Route path="/registration" component={Registration} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

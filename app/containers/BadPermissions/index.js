@@ -24,8 +24,8 @@ export class BadPermissions extends React.Component { // eslint-disable-line rea
     return (
       <div>
         <Helmet>
-          <title>BadPermissions</title>
-          <meta name="description" content="Description of BadPermissions" />
+          <title>Error</title>
+          <meta name="description" content="Access Denied Page" />
         </Helmet>
         <FormattedMessage {...messages.header} />
       </div>
