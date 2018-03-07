@@ -11,12 +11,12 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PageHeader from 'components/PageHeader/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectProfile from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import PageHeader from '../../components/PageHeader/index';
 
 export class Profile extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -24,7 +24,7 @@ export class Profile extends React.Component { // eslint-disable-line react/pref
       <div>
         <Helmet>
           <title>Profile</title>
-          <meta name="description" content="Description of Profile" />
+          <meta name="description" content="Profile Page" />
         </Helmet>
         <PageHeader title="Profile" />
       </div>

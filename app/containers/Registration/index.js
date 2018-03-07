@@ -11,13 +11,13 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PageHeader from 'components/PageHeader/index';
+import Form from 'components/Form/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectRegistration from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import PageHeader from '../../components/PageHeader/index';
-import Form from '../../components/Form/index';
 import { SCHEMAS } from '../App/constants';
 
 export class Registration extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -26,7 +26,7 @@ export class Registration extends React.Component { // eslint-disable-line react
       <div>
         <Helmet>
           <title>Registration</title>
-          <meta name="description" content="Description of Registration" />
+          <meta name="description" content="Registration Page" />
         </Helmet>
         <PageHeader title="Registration" />
         <Form schema={SCHEMAS.registration} />

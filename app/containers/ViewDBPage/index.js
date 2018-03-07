@@ -8,17 +8,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-// import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PageHeader from 'components/PageHeader/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-// import messages from './messages';
-import PageHeader from '../../components/PageHeader/index';
 
 export class ViewDbpage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -26,7 +24,7 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
       <div>
         <Helmet>
           <title>Database</title>
-          <meta name="description" content="Description of ViewDbpage" />
+          <meta name="description" content="Database Page" />
         </Helmet>
         <PageHeader title="Database" />
       </div>

@@ -6,12 +6,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import { styledElements } from 'themes';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectEntriesPage from './selectors';
@@ -31,17 +31,12 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
     this.setState({ selection: e.target.value });
   }
   render() {
-    const Select = styled.select`
-      border: 1px solid black;
-      margin-left: 5px;
-      background-color: lavender;
-      margin-bottom: 5px;
-    `;
+    const Select = styledElements.Select;
     return (
       <div>
         <Helmet>
           <title>Entries</title>
-          <meta name="description" content="Description of EntriesPage" />
+          <meta name="description" content="Entries Page" />
         </Helmet>
         <PageHeader title="Database Entries" />
         <Select onChange={this.changeSelection}>

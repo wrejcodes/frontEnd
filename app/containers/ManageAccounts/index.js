@@ -11,20 +11,20 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PageHeader from 'components/PageHeader/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectManageAccounts from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import PageHeader from '../../components/PageHeader/index';
 
 export class ManageAccounts extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
         <Helmet>
-          <title>ManageAccounts</title>
-          <meta name="description" content="Description of ManageAccounts" />
+          <title>Accounts</title>
+          <meta name="description" content="Accounts Page" />
         </Helmet>
         <PageHeader title="Manage Accounts" />
       </div>

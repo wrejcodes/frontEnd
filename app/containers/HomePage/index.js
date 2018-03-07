@@ -11,15 +11,12 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import BigBtn1 from 'components/BigBtn1';
 import { getActive } from 'themes';
-import PageHeader from '../../components/PageHeader/index';
+import PageHeader from 'components/PageHeader/index';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  // constructor(){
-  //   super();
-  //
-  // };
   render() {
     const theme = getActive();
     const FlexBox = styled.div`
@@ -30,6 +27,10 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     `;
     return (
       <div>
+        <Helmet>
+          <title>Home</title>
+          <meta name="description" content="Home Page" />
+        </Helmet>
         <PageHeader title="My Chemical Bromance" />
         <br />
         <FlexBox >

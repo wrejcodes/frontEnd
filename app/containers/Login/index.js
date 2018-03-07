@@ -11,13 +11,13 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PageHeader from 'components/PageHeader/index';
+import Form from 'components/Form/index';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectLogin from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import PageHeader from '../../components/PageHeader/index';
-import Form from '../../components/Form/index';
 import { SCHEMAS } from '../App/constants';
 
 export class Login extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -26,7 +26,7 @@ export class Login extends React.Component { // eslint-disable-line react/prefer
       <div>
         <Helmet>
           <title>Login</title>
-          <meta name="description" content="Description of Login" />
+          <meta name="description" content="Login Page" />
         </Helmet>
         <PageHeader title="Login" />
         <Form schema={SCHEMAS.login} />

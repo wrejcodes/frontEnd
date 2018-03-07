@@ -6,7 +6,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -16,7 +15,7 @@ import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 
 import Button1 from 'components/Button1/Loadable';
-import { getActive } from 'themes';
+import { getActive, styledElements } from '../../themes';
 import makeSelectNavBar from './selectors';
 import reducer from './reducer';
 import saga from './saga';
@@ -33,19 +32,14 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
 
   render() {
     const theme = getActive();
-    const NavWrap = styled.div`
-      height: 50px;
-      width: 100%;
-      background-color: grey;
-      display: -webkit-flex;
-      display: flex;
-    `;
+    const NavWrap = styledElements.NavWrap;
     return (
       <NavWrap>
         <Button1 theme={theme} text="HOME" link="/" handler={(link) => this.navigate(link)} />
         <Button1 theme={theme} text="ENTRIES" link="/entries" handler={(link) => this.navigate(link)} />
         <Button1 theme={theme} text="DATABASE" link="/database" handler={(link) => this.navigate(link)} />
         <Button1 theme={theme} text="LOGIN" link="/login" handler={(link) => this.navigate(link)} />
+        <Button1 theme={theme} text="REGISTRATION" link="/registration" handler={(link) => this.navigate(link)} />
         <Button1 theme={theme} text="PROFILE" link="/profile" handler={(link) => this.navigate(link)} />
         <Button1 theme={theme} text="ACCOUNTS" link="/accounts" handler={(link) => this.navigate(link)} />
         <Button1 theme={theme} text="DENIED" link="/denied" handler={(link) => this.navigate(link)} />
