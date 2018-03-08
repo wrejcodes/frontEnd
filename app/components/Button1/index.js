@@ -19,7 +19,12 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
     evt.preventDefault();
     this.props.handler(this.props.link);
   }
-
+  // isBtnActive = () => {
+  //   if (this.props.className === 'active') {
+  //     return this.props.theme.get('primary');
+  //   }
+  //   return this.props.theme.get('tertiary');
+  // };
   render() {
     const StyledButton = styled.a`
       background-color: ${this.props.theme.get('secondary')};
@@ -44,7 +49,7 @@ Button1.propTypes = {
   text: PropTypes.string,
   theme: ImmutablePropTypes.map,
   handler: PropTypes.func.isRequired,
-  // active: PropTypes.obj,
+  // className: PropTypes.string,
 };
 
 export default Button1;
