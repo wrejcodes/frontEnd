@@ -9,7 +9,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { getActive } from 'themes';
 import Assay from '../../../moch_data/json/assay_v2.json';
-import Citation from '../../../moch_data/json/citation_v2.json';
+// import Citation from '../../../moch_data/json/citation_v2.json';
 // import CitationID from '../../../moch_data/json/citation_id_v2.json';
 // import Target from '../../../moch_data/json/target_v2.json';
 // import TargetID from '../../../moch_data/json/target_id_v2.json';
@@ -21,7 +21,7 @@ class DbViewport extends React.Component { // eslint-disable-line react/prefer-s
   constructor(props) {
     super(props);
     // this.moch = Object.assign(Assay, Citation, CitationID, Target, TargetID, Tox);
-    this.moch = [...Assay, ...Citation];
+    this.moch = Assay;
     // this.setState({
     //
     // })

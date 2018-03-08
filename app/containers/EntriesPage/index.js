@@ -67,8 +67,13 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
         <Select onChange={this.changeSelection}>
           <option value="blank" hidden>Select Form</option>
           <option value="target">Target</option>
+          <option value="target_id">Target ID</option>
           <option value="experiment">Experiment</option>
           <option value="chemical">Chemical</option>
+          <option value="toxicity">Toxicity</option>
+          <option value="assay">Assay</option>
+          <option value="citation">Citation</option>
+          <option value="citation_id">Citation ID</option>
         </Select>
         <Form schema={SCHEMAS[this.state.selection]} schemaType={this.state.selection} handler={this.submit} />
       </div>
