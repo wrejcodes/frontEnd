@@ -1,3 +1,4 @@
+/* eslint no-alert: "warn" */
 /**
  *
  * EntriesPage
@@ -41,7 +42,7 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
     const data = {};
     for (let i = 0; i < fields.length; i += 1) {
       if (fields[i].name === undefined || fields[i].name === '') {
-        console.log('This entry has not defined connection to database');
+        window.alert('This entry has not defined connection to database');
         return;
       }
       data[fields[i].name] = fields[i].value;

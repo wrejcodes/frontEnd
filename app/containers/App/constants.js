@@ -10,7 +10,7 @@
  */
 
 export const DEFAULT_LOCALE = 'en';
-export const API_URL = 'http://localhost:3001/api';
+export const API_URL = 'http://localhost:3001';
 export const SCHEMAS = {
   blank: [],
   login: [

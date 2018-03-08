@@ -21,12 +21,20 @@ function parseJSON(response) {
  *
  * @return {object|undefined} Returns either the response, or throws an error
  */
-function checkStatus(response) {
+async function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
 
-  const error = new Error(response.statusText);
+  let statusMsg;
+  try {
+    statusMsg = await response.json();
+    statusMsg = statusMsg.err;
+  } catch (err) {
+    statusMsg = response.statusText;
+  }
+
+  const error = new Error(statusMsg);
   error.response = response;
   throw error;
 }
