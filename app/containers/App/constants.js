@@ -46,12 +46,12 @@ export const SCHEMAS = {
     { type: 'text', label: 'Technological Target Track Status', name: 'technological_target_track_status' },
   ],
   experiment: [
-    { type: 'text', name: ' Experiment Name' },
-    { type: 'number', name: ' Experiment ID' },
+    { type: 'text', label: 'Experiment Name', name: 'experiment_name' },
+    { type: 'number', label: 'Experiment ID', name: 'experiment_ID' },
   ],
   chemical: [
-    { type: 'text', name: ' Chemical Name' },
-    { type: 'number', name: ' Chemical ID' },
+    { type: 'text', label: 'Chemical Name', name: 'chemical_name' },
+    { type: 'number', label: 'Chemical ID', name: 'chemical_id' },
   ],
   toxicity: [
     { type: 'number', label: 'M4id', name: 'm4id' },
