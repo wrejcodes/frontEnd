@@ -14,7 +14,7 @@ import { push } from 'react-router-redux';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 
-import Button1 from 'components/Button1/Loadable';
+import NavBtn from 'components/BTNS/NavBtn/Loadable';
 import { getActive, styledElements } from '../../themes';
 import makeSelectNavBar from './selectors';
 import reducer from './reducer';
@@ -35,14 +35,14 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
     const NavWrap = styledElements.NavWrap;
     return (
       <NavWrap>
-        <Button1 theme={theme} text="HOME" link="/" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="ENTRIES" link="/entries" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="DATABASE" link="/database" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="LOGIN" link="/login" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="REGISTRATION" link="/registration" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="PROFILE" link="/profile" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="ACCOUNTS" link="/accounts" handler={(link) => this.navigate(link)} />
-        <Button1 theme={theme} text="DENIED" link="/denied" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="HOME" link="/" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="ENTRIES" link="/entries" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="DATABASE" link="/database" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="LOGIN" link="/login" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="REGISTRATION" link="/registration" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="PROFILE" link="/profile" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="ACCOUNTS" link="/accounts" handler={(link) => this.navigate(link)} />
+        <NavBtn theme={theme} text="DENIED" link="/denied" handler={(link) => this.navigate(link)} />
       </NavWrap>
     );
   }
