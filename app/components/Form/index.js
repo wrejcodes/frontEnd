@@ -37,8 +37,8 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
 
 Form.propTypes = {
   schema: PropTypes.array.isRequired,
-  schemaType: PropTypes.string.isRequired,
-  handler: PropTypes.func.isRequired,
+  schemaType: PropTypes.isRequired,
+  handler: PropTypes.isRequired,
 };
 
 export default Form;

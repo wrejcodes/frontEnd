@@ -45,7 +45,7 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
           <title>Home</title>
           <meta name="description" content="Home Page" />
         </Helmet>
-        <PageHeader title="My Chemical Bromance" />
+        <PageHeader title="ChemTox DBMS" />
         <br />
         <FlexBox >
           <BigBtn1 tab="1%" theme={theme} text="View Database" link="/database" handler={(link) => this.navigate(link)} />
