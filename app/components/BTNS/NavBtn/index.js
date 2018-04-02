@@ -27,14 +27,16 @@ class NavBtn extends React.Component { // eslint-disable-line react/prefer-state
   // };
   render() {
     const StyledButton = styled.a`
-      background-color: ${this.props.theme.get('secondary')};
-      color: #222222;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid black;
       width: auto;
       height: auto;
       padding: 10px;
+      cursor: pointer;
+      &:hover{
+        color: ${this.props.theme.get('secondary')};
+      }
     `;
     return (
       <StyledButton onClick={(evt) => { this.onClick(evt); }} >
