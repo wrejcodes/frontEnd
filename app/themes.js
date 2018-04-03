@@ -22,12 +22,10 @@ const setActive = (activeTheme) => {
 const getActive = () => {
   try {
     for (let i = 0; i < Object.entries(themes).length; i += 1) {
-      // console.log(themes[Object.entries(themes)[i][0]]);
       const temp = Object.entries(themes)[i];
       if (temp[1].get('active')) {
-        // console.log(temp[1]);
         return temp[1]; // if i = 0, this is equivilant to themes.default
-      } // travis did this to me
+      }
     }
     themes.default.set('active', true);
     return themes.default;
@@ -49,7 +47,7 @@ const themes = {
     secondary_text: '#5b5b5b',
   }),
   blue: Map({
-    // ...default,
+    // ...default, //i would like to inherit the values of default not overwritten in the future
     active: true,
     primary: 'white',
     secondary: '#a2d5e5',
@@ -94,7 +92,14 @@ const styledElements = {
   NavWrap: styled.div`
         height: 50px;
         width: 100%;
-        background-color: grey;
+        background-color: #222222;
+        display: -webkit-flex;
+        display: flex;
+      `,
+  ProfileBtn: styled.div`
+        height: 50px;
+        width: 100%;
+        background-color: #222222;
         display: -webkit-flex;
         display: flex;
       `,

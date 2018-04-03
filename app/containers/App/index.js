@@ -25,13 +25,14 @@ import Registration from 'containers/Registration/Loadable';
 import BadPermissions from 'containers/BadPermissions/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavBar from 'containers/NavBar/Loadable';
+import Footer from 'containers/Footer/Loadable';
 
 // import Analysis from 'containers/Analysis/Loadable';
 
 export default function App() {
   return (
-    <div>
-      {/* <NavBar path={this.props.location.pathname} /> */}
+    <div className="app_container">
+      {/* <NavBar location={this.props.location} /> */}
       <NavBar />
       <div className="body_wrap">
         <Switch>
@@ -46,6 +47,7 @@ export default function App() {
           <Route component={NotFoundPage} />
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -6,16 +6,14 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
+    margin:0;
+    padding: 0;
+    height: 100%;
   }
 
   body {
     font-family: Georgia, Times, 'Times New Roman', serif;
-    background: rgb(229,229,229);
-    background: -moz-linear-gradient(top, rgba(229,229,229,1) 2%, rgba(141,209,248,1) 98%, rgba(30,87,153,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(229,229,229,1) 2%,rgba(141,209,248,1) 98%,rgba(30,87,153,1) 100%);
-    background: linear-gradient(to bottom, rgba(229,229,229,1) 2%,rgba(141,209,248,1) 98%,rgba(30,87,153,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#1e5799',GradientType=0 );
-    /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    background: #efefef;
   }
 
   body.fontLoaded {
@@ -25,23 +23,38 @@ injectGlobal`
   #app {
     min-height: 100%;
     min-width: 100%;
+    margin:0;
+    padding: 0;
+    height: 100%;
+
+  }
+  .app_container {
+    min-height:100%;
+    position:relative;
   }
 
   .header {
-      max-width: 700px;
-      margin: auto;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
   }
 
-  .MainBodyWrap {
-
-  }
   .body_wrap{
-    background-color:white;
     max-width: 1300px;
     margin:auto;
-    border: 1px solid grey;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px; ${''/* Padding for top of footer */}
+    padding-bottom: 12em; ${''/* Height of footer plus some room */}
+  }
+
+  .footer{
+    position:absolute;
+    bottom: 0px;  ${''/* Padding for top of footer */}
+    width: 100%;
+  height: 8em; ${''/* Height of footer */}
+    background: black;
+    color: white;
   }
 
   p,

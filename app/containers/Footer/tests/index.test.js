@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import PageHeader from '../index';
+// import { Footer } from '../index';
 
-describe('<PageHeader />', () => {
+describe('<Footer />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });

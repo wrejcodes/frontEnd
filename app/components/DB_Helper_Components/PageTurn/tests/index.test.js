@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import PageHeader from '../index';
+// import PageTurn from '../index';
 
-describe('<PageHeader />', () => {
+describe('<PageTurn />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });

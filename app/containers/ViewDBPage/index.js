@@ -15,7 +15,7 @@ import { compose } from 'redux';
 import { getActive } from 'themes';
 
 import PageHeader from 'components/PageHeader/index';
-import DbViewport from 'components/DbViewport';
+import DbViewport from 'components/DB_Helper_Components/DbViewport';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';

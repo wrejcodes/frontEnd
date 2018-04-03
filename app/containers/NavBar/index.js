@@ -1,4 +1,4 @@
-/**
+ /**
  *
  * NavBar
  *
@@ -33,6 +33,7 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
   render() {
     const theme = getActive();
     const NavWrap = styledElements.NavWrap;
+    // const ProfileBtn = styledElements.ProfileBtn;
     return (
       <NavWrap>
         <NavBtn theme={theme} text="HOME" link="/" handler={(link) => this.navigate(link)} />
@@ -42,7 +43,7 @@ export class NavBar extends React.Component { // eslint-disable-line react/prefe
         <NavBtn theme={theme} text="REGISTRATION" link="/registration" handler={(link) => this.navigate(link)} />
         <NavBtn theme={theme} text="PROFILE" link="/profile" handler={(link) => this.navigate(link)} />
         <NavBtn theme={theme} text="ACCOUNTS" link="/accounts" handler={(link) => this.navigate(link)} />
-        <NavBtn theme={theme} text="DENIED" link="/denied" handler={(link) => this.navigate(link)} />
+        {/* <NavBtn theme={theme} text="DENIED" link="/denied" handler={(link) => this.navigate(link)} /> */}
       </NavWrap>
     );
   }
