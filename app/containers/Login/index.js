@@ -10,8 +10,6 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import messages from './messages';
-
 import PageHeader from 'components/PageHeader/index';
 import Form from 'components/Form/index';
 import injectSaga from 'utils/injectSaga';
@@ -20,6 +18,7 @@ import makeSelectLogin from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { SCHEMAS } from '../App/constants';
+import messages from './messages';
 
 export class Login extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {

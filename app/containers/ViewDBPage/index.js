@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import messages from './messages'
 
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -22,6 +21,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 export class ViewDbpage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {

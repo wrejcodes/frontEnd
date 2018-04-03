@@ -13,12 +13,12 @@ export const DEFAULT_LOCALE = 'en';
 export const SCHEMAS = {
   blank: [],
   login: [
-    { type: 'text', label: ' Username',name: 'username' },
+    { type: 'text', label: ' Username', name: 'username' },
     { type: 'password', label: ' Password', name: 'password' },
   ],
   registration: [
-    { type: 'email', label: ' Email' , name: 'email' },
-    { type: 'text', label: ' Username' , name: 'username' },
+    { type: 'email', label: ' Email', name: 'email' },
+    { type: 'text', label: ' Username', name: 'username' },
     { type: 'password', label: ' Password', name: 'password' },
     { type: 'password', label: ' Confrim Password', name: 'confirmPassword' },
   ],

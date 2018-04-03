@@ -11,7 +11,6 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { push } from 'react-router-redux';
-import messages from './messages';
 
 import styled from 'styled-components';
 import BigBtn1 from 'components/BigBtn1';
@@ -23,6 +22,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectHomePage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 export class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
