@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import messages from './messages';
 
 import PageHeader from 'components/PageHeader/index';
 import injectSaga from 'utils/injectSaga';
@@ -26,7 +27,7 @@ export class Profile extends React.Component { // eslint-disable-line react/pref
           <title>Profile</title>
           <meta name="description" content="Profile Page" />
         </Helmet>
-        <PageHeader title="Profile" />
+        <PageHeader title={messages.header.defaultMessage} />
       </div>
     );
   }

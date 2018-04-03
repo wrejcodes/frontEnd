@@ -22,6 +22,7 @@ import reducer from './reducer';
 import saga from './saga';
 import { postEntry } from './actions';
 import { SCHEMAS } from '../App/constants';
+import messages from './messages';
 
 export class EntriesPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor() {
@@ -63,7 +64,7 @@ export class EntriesPage extends React.Component { // eslint-disable-line react/
           <title>Entries</title>
           <meta name="description" content="Entries Page" />
         </Helmet>
-        <PageHeader title="Database Entries" />
+        <PageHeader title={messages.header.defaultMessage} />
         <Select onChange={this.changeSelection}>
           <option value="blank" hidden>Select Form</option>
           <option value="target">Target</option>

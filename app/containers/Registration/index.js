@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import messages from './messages';
 
 import PageHeader from 'components/PageHeader/index';
 import Form from 'components/Form/index';
@@ -28,7 +29,7 @@ export class Registration extends React.Component { // eslint-disable-line react
           <title>Registration</title>
           <meta name="description" content="Registration Page" />
         </Helmet>
-        <PageHeader title="Registration" />
+        <PageHeader title={messages.header.defaultMessage} />
         <Form schema={SCHEMAS.registration} />
       </div>
     );

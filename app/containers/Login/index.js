@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import messages from './messages';
 
 import PageHeader from 'components/PageHeader/index';
 import Form from 'components/Form/index';
@@ -28,7 +29,7 @@ export class Login extends React.Component { // eslint-disable-line react/prefer
           <title>Login</title>
           <meta name="description" content="Login Page" />
         </Helmet>
-        <PageHeader title="Login" />
+        <PageHeader title={messages.header.defaultMessage} />
         <Form schema={SCHEMAS.login} />
       </div>
     );

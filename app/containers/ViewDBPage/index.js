@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import messages from './messages'
 
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -44,7 +45,7 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
           <title>Database</title>
           <meta name="description" content="Database Page" />
         </Helmet>
-        <PageHeader title="Database" />
+        <PageHeader title={messages.header.defaultMessage} />
         <Select onChange={this.changeSelection}>
           <option value="blank" hidden>Select Form</option>
           <option value="target">Target</option>

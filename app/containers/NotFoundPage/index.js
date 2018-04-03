@@ -11,11 +11,16 @@
 
 import React from 'react';
 import PageHeader from 'components/PageHeader/index';
+import messages from './messages';
+import { FormattedMessage } from 'react-intl';
 
 export default class NotFound extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <PageHeader title="This Page Cannot Be Found" />
+      <div>
+        <PageHeader title={messages.header.defaultMessage} />
+        <FormattedMessage {...messages.body} />
+      </div>
     );
   }
 }
