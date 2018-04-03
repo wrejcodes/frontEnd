@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 // import { shallowToJson } from 'enzyme-to-json';
 
-import { getActive } from 'themes';
+// import { getActive } from 'themes';
 
 import NavBtn from '../index';
 

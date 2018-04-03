@@ -15,7 +15,8 @@ import { compose } from 'redux';
 import { getActive } from 'themes';
 
 import PageHeader from 'components/PageHeader/index';
-import DbViewport from 'components/DB_Helper_Components/DbViewport';
+import DbSideSearch from 'components/DbSideSearch';
+import DbViewPort from 'components/DbViewPort';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';
@@ -56,7 +57,10 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
           <option value="citation">Citation</option>
           <option value="citation_id">Citation ID</option>
         </Select>
-        <DbViewport />
+        <div>
+          <DbViewPort />
+          <DbSideSearch />
+        </div>
       </div>
     );
   }
