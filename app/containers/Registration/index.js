@@ -19,6 +19,7 @@ import makeSelectRegistration from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { SCHEMAS } from '../App/constants';
+import messages from './messages';
 
 export class Registration extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -28,7 +29,7 @@ export class Registration extends React.Component { // eslint-disable-line react
           <title>Registration</title>
           <meta name="description" content="Registration Page" />
         </Helmet>
-        <PageHeader title="Registration" />
+        <PageHeader title={messages.header.defaultMessage} />
         <Form schema={SCHEMAS.registration} />
       </div>
     );

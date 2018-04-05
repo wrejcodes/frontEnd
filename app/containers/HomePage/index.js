@@ -22,6 +22,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectHomePage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 export class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -45,7 +46,7 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
           <title>Home</title>
           <meta name="description" content="Home Page" />
         </Helmet>
-        <PageHeader title="My Chemical Bromance" />
+        <PageHeader title={messages.header.defaultMessage} />
         <br />
         <FlexBox >
           <BigBtn1 tab="1%" theme={theme} text="View Database" link="/database" handler={(link) => this.navigate(link)} />

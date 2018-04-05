@@ -21,6 +21,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 export class ViewDbpage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -44,7 +45,7 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
           <title>Database</title>
           <meta name="description" content="Database Page" />
         </Helmet>
-        <PageHeader title="Database" />
+        <PageHeader title={messages.header.defaultMessage} />
         <Select onChange={this.changeSelection}>
           <option value="blank" hidden>Select Form</option>
           <option value="target">Target</option>
