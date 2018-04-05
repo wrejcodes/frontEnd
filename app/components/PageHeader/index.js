@@ -20,7 +20,7 @@ class PageHeader extends React.Component { // eslint-disable-line react/prefer-s
 }
 
 PageHeader.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 export default PageHeader;

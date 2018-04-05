@@ -8,6 +8,6 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   header: {
     id: 'app.containers.ManageAccounts.header',
-    defaultMessage: 'This is ManageAccounts container !',
+    defaultMessage: 'Manage Accounts',
   },
 });

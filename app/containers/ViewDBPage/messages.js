@@ -8,6 +8,6 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   header: {
     id: 'app.containers.ViewDbpage.header',
-    defaultMessage: 'This is ViewDbpage container !',
+    defaultMessage: 'Database',
   },
 });

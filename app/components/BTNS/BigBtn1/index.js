@@ -38,7 +38,7 @@ class BigBtn1 extends React.Component { // eslint-disable-line react/prefer-stat
       padding: 10px;
     `;
     return (
-      <StyledButton onClick={(evt) => this.onClick(evt)} >
+      <StyledButton className="button" onClick={(evt) => this.onClick(evt)} >
         {this.props.text}
       </StyledButton>
     );

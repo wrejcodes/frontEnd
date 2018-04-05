@@ -17,6 +17,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectProfile from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 export class Profile extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -26,7 +27,7 @@ export class Profile extends React.Component { // eslint-disable-line react/pref
           <title>Profile</title>
           <meta name="description" content="Profile Page" />
         </Helmet>
-        <PageHeader title="Profile" />
+        <PageHeader title={messages.header.defaultMessage} />
       </div>
     );
   }

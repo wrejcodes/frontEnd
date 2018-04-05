@@ -19,12 +19,6 @@ class NavBtn extends React.Component { // eslint-disable-line react/prefer-state
     evt.preventDefault();
     this.props.handler(this.props.link);
   }
-  // isBtnActive = () => {
-  //   if (this.props.className === 'active') {
-  //     return this.props.theme.get('primary');
-  //   }
-  //   return this.props.theme.get('tertiary');
-  // };
   render() {
     const StyledButton = styled.a`
       color: white;
@@ -51,7 +45,6 @@ NavBtn.propTypes = {
   text: PropTypes.string,
   theme: ImmutablePropTypes.map,
   handler: PropTypes.func.isRequired,
-  // className: PropTypes.string,
 };
 
 export default NavBtn;
