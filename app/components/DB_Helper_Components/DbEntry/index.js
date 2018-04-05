@@ -34,10 +34,15 @@ class DbEntry extends React.Component { // eslint-disable-line react/prefer-stat
       background-color: ${theme.get('tertiary')};
       color: $(theme.get('secondary_text'));
       position:relative;
+      display: flex;
       > h3 {
-        position: absolute;
+        display:inline-block;
+        ${'' /* position: absolute;
         top: 0px;
-        margin: 0px;
+        margin: 0px; */}
+      }
+      &:hover{
+        background-color: #b2c3e4;
       }
       &.isActive {
         background-color: lightgreen;
@@ -51,8 +56,9 @@ class DbEntry extends React.Component { // eslint-disable-line react/prefer-stat
     return (
       <Entry onClick={(evt) => this.minmax(evt)} >
         <h3> {this.props.moch.assay_name} :
-          <span style={{ fontSize: '.9em' }}> ID: {this.props.moch.aeid} </span></h3>
-        <p style={{ paddingTop: '.5em' }}> Description: {this.props.moch.assay_component_endpoint_desc}</p>
+          <span style={{ fontSize: '.9em' }}> ID: {this.props.moch.aeid} </span>
+        </h3>
+        {/* <p style={{ paddingTop: '.5em' }}> Description: {this.props.moch.assay_component_endpoint_desc}</p> */}
       </Entry>
     );
   }

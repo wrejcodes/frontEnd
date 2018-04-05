@@ -17,6 +17,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectManageAccounts from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 export class ManageAccounts extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -26,7 +27,7 @@ export class ManageAccounts extends React.Component { // eslint-disable-line rea
           <title>Accounts</title>
           <meta name="description" content="Accounts Page" />
         </Helmet>
-        <PageHeader title="Manage Accounts" />
+        <PageHeader title={messages.header.defaultMessage} />
       </div>
     );
   }

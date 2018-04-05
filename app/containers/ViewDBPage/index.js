@@ -12,15 +12,16 @@ import styled from 'styled-components';
 
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import { getActive } from 'themes';
 
 import PageHeader from 'components/PageHeader/index';
-import DbViewport from 'components/DbViewport';
+import DbSideSearch from 'components/DbSideSearch';
+import DbViewPort from 'components/DbViewPort';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectViewDbpage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+// import messages from './messages';
 
 export class ViewDbpage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -31,12 +32,11 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
     this.setState({ selection: e.target.value });
   }
   render() {
-    const theme = getActive();
-    const Select = styled.select`
-      border: 1px solid black;
-      margin-left: 5px;
-      background-color: ${theme.get('primary')};
-      margin-bottom: 5px;
+    const ViewportWrap = styled.div`
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      height:80vh;
     `;
     return (
       <div>
@@ -45,18 +45,10 @@ export class ViewDbpage extends React.Component { // eslint-disable-line react/p
           <meta name="description" content="Database Page" />
         </Helmet>
         <PageHeader title="Database" />
-        <Select onChange={this.changeSelection}>
-          <option value="blank" hidden>Select Form</option>
-          <option value="target">Target</option>
-          <option value="target_id">Target ID</option>
-          <option value="experiment">Experiment</option>
-          <option value="chemical">Chemical</option>
-          <option value="toxicity">Toxicity</option>
-          <option value="assay">Assay</option>
-          <option value="citation">Citation</option>
-          <option value="citation_id">Citation ID</option>
-        </Select>
-        <DbViewport />
+        <ViewportWrap>
+          <DbViewPort />
+          <DbSideSearch />
+        </ViewportWrap>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import BigBtn1 from '../index';
+// import PageTurn from '../index';
 
-describe('<BigBtn1 />', () => {
+describe('<PageTurn />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });

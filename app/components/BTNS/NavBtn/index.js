@@ -1,6 +1,6 @@
 /**
 *
-* Button1
+* NavBtn
 *
 */
 
@@ -9,7 +9,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
-class Button1 extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class NavBtn extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -19,22 +19,18 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
     evt.preventDefault();
     this.props.handler(this.props.link);
   }
-  // isBtnActive = () => {
-  //   if (this.props.className === 'active') {
-  //     return this.props.theme.get('primary');
-  //   }
-  //   return this.props.theme.get('tertiary');
-  // };
   render() {
     const StyledButton = styled.a`
-      background-color: ${this.props.theme.get('secondary')};
-      color: #222222;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid black;
       width: auto;
       height: auto;
       padding: 10px;
+      cursor: pointer;
+      &:hover{
+        color: ${this.props.theme.get('secondary')};
+      }
     `;
     return (
       <StyledButton onClick={(evt) => { this.onClick(evt); }} >
@@ -44,12 +40,11 @@ class Button1 extends React.Component { // eslint-disable-line react/prefer-stat
   }
 }
 
-Button1.propTypes = {
+NavBtn.propTypes = {
   link: PropTypes.string.isRequired,
   text: PropTypes.string,
   theme: ImmutablePropTypes.map,
   handler: PropTypes.func.isRequired,
-  // className: PropTypes.string,
 };
 
-export default Button1;
+export default NavBtn;
