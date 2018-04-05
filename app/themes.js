@@ -92,7 +92,7 @@ const styledElements = {
   NavWrap: styled.div`
         height: 50px;
         width: 100%;
-        background-color: #222222;
+        background-color: #111;
         display: -webkit-flex;
         display: flex;
       `,

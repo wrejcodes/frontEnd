@@ -13,7 +13,12 @@ injectGlobal`
 
   body {
     font-family: Georgia, Times, 'Times New Roman', serif;
-    background: #efefef;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dddddd+0,ffffff+50,dddddd+100 */
+    background: rgb(221,221,221); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 50%, rgba(221,221,221,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(221,221,221,1) 0%,rgba(255,255,255,1) 50%,rgba(221,221,221,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(221,221,221,1) 0%,rgba(255,255,255,1) 50%,rgba(221,221,221,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#dddddd',GradientType=1 ); /* IE6-9 */
   }
 
   body.fontLoaded {
@@ -53,7 +58,7 @@ injectGlobal`
     bottom: 0px;  ${''/* Padding for top of footer */}
     width: 100%;
   height: 8em; ${''/* Height of footer */}
-    background: black;
+    background: #111;
     color: white;
   }
 
