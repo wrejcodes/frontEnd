@@ -13,7 +13,7 @@ import { compose } from 'redux';
 import { push } from 'react-router-redux';
 
 import styled from 'styled-components';
-import BigBtn1 from 'components/BigBtn1';
+import BigBtn1 from 'components/BTNS/BigBtn1';
 import { getActive } from 'themes';
 import PageHeader from 'components/PageHeader/index';
 

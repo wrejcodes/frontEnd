@@ -25,24 +25,29 @@ import Registration from 'containers/Registration/Loadable';
 import BadPermissions from 'containers/BadPermissions/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavBar from 'containers/NavBar/Loadable';
+import Footer from 'containers/Footer/Loadable';
+
 // import Analysis from 'containers/Analysis/Loadable';
 
 export default function App() {
   return (
-    <div>
-      {/* <NavBar path={this.props.location.pathname} /> */}
+    <div className="app_container">
+      {/* <NavBar location={this.props.location} /> */}
       <NavBar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/entries" component={EntriesPage} />
-        <Route path="/database" component={ViewDBPage} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/login" component={Login} />
-        <Route path="/accounts" component={ManageAccounts} />
-        <Route path="/denied" component={BadPermissions} />
-        <Route path="/registration" component={Registration} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <div className="body_wrap">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/entries" component={EntriesPage} />
+          <Route path="/database" component={ViewDBPage} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/login" component={Login} />
+          <Route path="/accounts" component={ManageAccounts} />
+          <Route path="/denied" component={BadPermissions} />
+          <Route path="/registration" component={Registration} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
+      <Footer />
     </div>
   );
 }
