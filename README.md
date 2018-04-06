@@ -25,6 +25,13 @@
 
 <br />
 
+## Installation
+**If you are on debian you must run the following command before trying to install Dependencies**
+```
+  sudo apt install libpng-dev
+```
+
+
 ## Documentation
 
 - [**The Hitchhikers Guide to `react-boilerplate`**](docs/general/introduction.md): An introduction to the setup of this website
