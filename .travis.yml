@@ -10,6 +10,10 @@ script:
   - npm run test
   - npm run build
 
+addons:
+  apt:
+    - libpng-dev
+
 before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
