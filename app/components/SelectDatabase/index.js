@@ -34,15 +34,6 @@ class SelectDatabase extends React.Component { // eslint-disable-line react/pref
     );
   }
 }
-/* <option value="blank" hidden><FormattedMessage {...messages.select_form} /></option>
-<option value="target">Target</option>
-<option value="target_id">Target ID</option>
-<option value="experiment">Experiment</option>
-<option value="chemical">Chemical</option>
-<option value="toxicity">Toxicity</option>
-<option value="assay">Assay</option>
-<option value="citation">Citation</option>
-<option value="citation_id">Citation ID</option> */
 
 SelectDatabase.propTypes = {
 
