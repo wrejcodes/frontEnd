@@ -11,10 +11,12 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { push } from 'react-router-redux';
+import { Image } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 import SearchBar from 'components/SearchBar/index';
-import PageHeader from 'components/PageHeader/index';
+
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
@@ -23,6 +25,8 @@ import reducer from './reducer';
 import saga from './saga';
 import { getEntry } from './actions';
 import messages from './messages';
+import '../../images/CheMoa_Transparent.png';
+
 
 export class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -43,14 +47,23 @@ export class HomePage extends React.Component { // eslint-disable-line react/pre
       -webkit-flex-direction: column;
       flex-direction: column;
     `;
+    const CenterImage = styled.div`
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0,0,0,0);
+    `;
     return (
       <div>
         <Helmet>
           <title>Home</title>
           <meta name="description" content="Home Page" />
         </Helmet>
-        <PageHeader title={messages.header.defaultMessage} />
-        <br />
+        <CenterImage>
+          <Image src="/CheMoa_Transparent.png" responsive square />
+        </CenterImage>
+        <p className="text-center"><FormattedMessage {...messages.description} /></p>
         <FlexBox >
           <SearchBar handler={this.submit} />
         </FlexBox>
