@@ -12,12 +12,11 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { push } from 'react-router-redux';
 import { Image } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 
 import styled from 'styled-components';
 import BigBtn1 from 'components/BTNS/BigBtn1';
 import { getActive } from 'themes';
-import PageHeader from 'components/PageHeader/index';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
